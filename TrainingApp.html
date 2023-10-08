@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="trainingApp.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-
+    <h1>Client-Side Routing Example</h1>
+    <ul id="nav_links">
+        <li id="1"><a data-path="/upperBody">UpperBody</a></li>
+        <li id="2"><a data-path="/lowerBody">LowerBody</a></li>
+    </ul>
+    <div class="content-block" data-post="/upperBody">
+        <ul id="nav_links1">
+            <li id="11"><a data-path="/upperBody/Chest">Chest</a></li>
+            <li id="22"><a data-path="/upperBody/Shoulders">Shoulders</a></li>
+        </ul>
+    </div>
+    <div class="content-block hidden" data-post="/upperBody/Chest">
+        <div>content</div>
+    </div>
+    <div class="content-block" data-post="/lowerBody">
+        <ul id="nav_links_LowerBody">
+            <li id="21"><a data-path="/lowerBody/Calves">Calves</a></li>
+            <li id="23"><a data-path="/lowerBody/Glutes">Glutes</a></li>
+        </ul>
+    </div>
+    <script src="trainingApp.js"></script>
 </body>
 </html>
